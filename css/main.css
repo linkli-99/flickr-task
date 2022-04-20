@@ -24,3 +24,26 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.image_full{
+    height:720px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 800px;
+    position: relative;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    font-family: fantasy;
+    font-size: xx-large;
+}

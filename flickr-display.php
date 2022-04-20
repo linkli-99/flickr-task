@@ -29,29 +29,17 @@ function get_image($tag){
         if(!isset($pic['url_l']) || $pic['is_public'] == '0'){
             continue;
         }
-        $data = array();
-        $data['url_l'] = $pic['url_l'];
-        $data['title'] = $pic['title'];
-        $filtered_results[] = $data;
+        $filtered_results[] = $pic['url_l'];
     }
 
     return $filtered_results;
 }
 
 ?>
-<!DOCTYPE html>
 
-<style>
-<?php include 'css/main.css'; ?>
-</style>
-
-<body>
-    <div class="search-container">
-        <form action="/flickr-display.php", method="get">
-        <input type="text" placeholder="Search Image.." name="tag">
-        <button type="submit">Search</button>
-        </form>
-    </div>
+<?php
+include('html/header.html');
+?>
     <?php
         if ($_GET['tag'] && isset($_GET['tag'])){
             $images = get_image($_GET['tag']);
@@ -65,12 +53,13 @@ function get_image($tag){
         <div class="image_gallery">
             <?php foreach($images as $image): ?>
                 <form class="image", action ="/image.php", method="get">
-                    <input type="hidden" name="url" value="<?php echo $image['url_l'];?>">
-                    <input type="hidden" name="title" value="<?php echo $image['title'];?>">
-                    <div class="image_thumbnail", style="background-image: url(<?php echo $image['url_l']; ?>)"></div>
+                    <input type="hidden" name="url" value="<?php echo $image;?>">
+                    <div class="image_thumbnail", style="background-image: url(<?php echo $image; ?>)"></div>
                     <button class="image_submit", type="submit">Select</button>
                 </form>
             <?php endforeach ?>
         </div>
     <?php endif ?>
-</body>
+<?php
+include('html/footer.html');
+?>
