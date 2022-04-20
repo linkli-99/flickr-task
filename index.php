@@ -1,4 +1,7 @@
 <?php
+/**
+ * Homepage Template
+ */
 include('html/header.html');
 ?>
 
