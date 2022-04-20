@@ -62,10 +62,12 @@
     margin: 0 auto;
     position: relative;
 }
+.positions{
+    display: flex;
+}
 
-.center{
+.text_position{
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 50;
@@ -74,3 +76,15 @@
     font-weight: bold;
     color:white;
 }
+.text_position[data-position="top"]{
+    top:25%;
+}
+
+.text_position[data-position="center"]{
+    top: 50%;
+}
+
+.text_position[data-position="bottom"]{
+    bottom:20%;
+}
+

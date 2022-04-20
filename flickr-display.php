@@ -58,7 +58,9 @@ include('html/header.html');
                     <button class="image_submit", type="submit">Select</button>
                 </form>
             <?php endforeach ?>
-        </div>
+            </div>
+        <?php else: ?>
+            <h1>No Results have been found, please search again</h1>
     <?php endif ?>
 <?php
 include('html/footer.html');
