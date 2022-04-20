@@ -1,6 +1,30 @@
 /* body{
     border: 1px solid red;
 } */
+
+.search-container {
+    margin: 0 auto;
+    width: 25%;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.search-container input{
+    width: 300px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.search-container button{
+    height: 30px;
+}
+
+.search-container label{
+    font-style: italic;
+    font-size: 1.5em;
+}
+
 .image{
     margin:30px;
     width:400px;
@@ -35,6 +59,7 @@
 
 .container{
     width: 800px;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -44,6 +69,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 50;
-    font-family: fantasy;
-    font-size: xx-large;
+    font-family: 'Bungee', cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    color:white;
 }

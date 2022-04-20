@@ -11,7 +11,7 @@ $url = $_GET['url'];
   </div>
 </div>
 
-<div class="text-input">
+<div class="search-container">
   <label for="text-name">Input text you want to add on the image: </label>
   <input type="text" id="text-field" name="text-name">
   <button id="text-generate">Generate</button> 
