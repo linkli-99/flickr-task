@@ -1,13 +1,6 @@
-<input type="text" placeholder="Search Image..">
-
-<table width="80%">
-    <tr>
-        <td>Image</td>
-        <td>Title</td>
-        <td>Owner</td>
-        <td width="50%">Description</td>
-        <td>Favorites</td>
-        <td>Flickr page</td>
-
-    </tr>
-</table>
+<div class="search-container">
+    <form action="/flickr-display.php", method="get">
+      <input type="text" placeholder="Search Image.." name="tag">
+      <button type="submit">Search</button>
+    </form>
+</div>
