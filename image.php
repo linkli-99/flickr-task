@@ -1,8 +1,14 @@
 <?php
+/**
+ * This page is used to display the image user selected and let user generate the meme on the image.
+ */
 include('html/header.html');
 ?>
 
 <?php
+/**
+ * Obtain URL of the image from the GET request initiated from flickr-display.
+ */
 $url = $_GET['url'];
 ?>
 

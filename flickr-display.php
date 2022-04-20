@@ -25,6 +25,10 @@ function get_image($tag){
     $photos = $flickr->api($params); 
     $filtered_results = array();
 
+    /**
+     * Check if the image returned has large size or is public.
+     * If doesn't have large image or is not public, skip.
+     */
     foreach($photos['photos']['photo'] as $pic){
         if(!isset($pic['url_l']) || $pic['is_public'] == '0'){
             continue;
@@ -41,6 +45,9 @@ function get_image($tag){
 include('html/header.html');
 ?>
     <?php
+    /**
+     * Check if user enters a valid input. If not, print out the error.
+     */
         if ($_GET['tag'] && isset($_GET['tag'])){
             $images = get_image($_GET['tag']);
         }
@@ -49,7 +56,13 @@ include('html/header.html');
         }
     ?>
 
-    <?php if($images): ?>
+    <?php if($images): 
+        /**
+         * If there are images returned from flickr, render all returned images.
+         * Images will be returned in form so user can be redirected to image.php template
+         * after selection.
+         */
+        ?>
         <div class="image_gallery">
             <?php foreach($images as $image): ?>
                 <form class="image", action ="/image.php", method="get">
